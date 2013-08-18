@@ -1,15 +1,19 @@
 -- -----------------------------------------------------------------------------
 -- transactions.sql
--- zeigt alle aktuellen Transaktionen und die zugehörigen Statements an 
--- (sofern auffindbar)
+-- shows all the transactions that are currently active in the database and
+-- the related SQL queries.
 -- -----------------------------------------------------------------------------
 
+-- save sqlplus environment
+@ save_settings.sql
+
+-- set sqlplus environment
 set timin off
 
 prompt
-prompt ***********************************************
-prompt * Aktive Transaktionen (inklusive Statements) *
-prompt ***********************************************
+prompt ******************************************
+prompt * active transactions (and their queries *
+prompt ******************************************
 
 column current_sql format a100
 column prev_sql format a100
@@ -41,3 +45,5 @@ select to_char(sysdate, 'dd.mm.yyyy hh24:mi:ss') curtime
 
 set timin on
 
+-- restore sqlplus environment
+@ restore_settings.sql

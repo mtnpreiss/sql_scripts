@@ -10,6 +10,10 @@ prompt * SQL Queries der letzten <n> Stunden *
 prompt ***************************************
 prompt
 
+-- sqlplus Variablen sichern
+@ save_settings.sql
+
+-- sqlplus Variablen setzen
 set verify off
 
 undefine sql_id
@@ -50,3 +54,5 @@ select *
              
 set verify on             
 
+-- sqlplus Variablen wiederherstellen
+@ restore_settings.sql

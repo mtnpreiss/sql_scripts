@@ -1,9 +1,13 @@
 -- ----------------------------------------------------------------------------
 -- cursessions.sql
 -- liefert diverse Informationen zu den Sessions in der Datenbank
--- aus v$session, v$sesstat, v$sql, v$sess_time_model
+-- aus gv$session, gv$sesstat, gv$sql, gv$sess_time_model
 -- ----------------------------------------------------------------------------
 
+-- sqlplus Variablen sichern
+@ save_settings.sql
+
+-- sqlplus Variablen setzen
 set verify off
 set pages 300
 
@@ -103,3 +107,5 @@ select to_char(sysdate, 'hh24:mi:ss') curtime
  order by s.username, s.osuser, s.module
 ;
 
+-- sqlplus Variablen wiederherstellen
+@ restore_settings.sql

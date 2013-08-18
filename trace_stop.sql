@@ -1,8 +1,6 @@
 -- -----------------------------------------------------------------------------
--- endtrace.sql
--- beendet Tracing auf Session-Ebene
--- <  07.2006 MP
--- 20.11.2006 MP: mit dbms_monitor-Package
+-- trace_end.sql
+-- stops sql trace for the current session
 -- -----------------------------------------------------------------------------
 
-exec dbms_monitor.SESSION_TRACE_DISABLE()
+exec dbms_monitor.session_trace_disable()

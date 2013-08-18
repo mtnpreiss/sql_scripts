@@ -1,7 +1,6 @@
 -- -----------------------------------------------------------------------------
 -- trace_10053_start.sql
--- startet ein CBO-Trace
--- 19.01.2013 MP
+-- starts CBO trace
 -- -----------------------------------------------------------------------------
 
-ALTER SESSION SET EVENTS '10053 trace name context forever, level 1';
+alter session set events '10053 trace name context forever, level 1';
