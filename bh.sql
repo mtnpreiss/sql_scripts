@@ -23,9 +23,9 @@
 column object_name format a30
 
 prompt
-prompt *************************************************************************
-prompt * listet Objekte auf, zu denen mehr als 10000 Blocks im Cache vorliegen *
-prompt *************************************************************************
+prompt ***********************************************************
+prompt * objects with more than 10000 blocks in the buffer cache *
+prompt ***********************************************************
 prompt
 
 prompt -----------------------------------

@@ -5,9 +5,9 @@
 -- -----------------------------------------------------------------------------
 
 prompt
-prompt ***************************************
-prompt * SQL Queries der letzten <n> Stunden *
-prompt ***************************************
+prompt **********************************************
+prompt * SQL queries executed in the last <n> hours *
+prompt **********************************************
 prompt
 
 -- save sqlplus environment

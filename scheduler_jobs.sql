@@ -28,9 +28,9 @@ select owner
 accept job_name prompt 'Name of the job: '
 
 prompt
-prompt **********************
-prompt * Basisinformationen *
-prompt **********************
+prompt *********************
+prompt * basic information *
+prompt *********************
 
 select owner
      , job_name
@@ -49,7 +49,7 @@ select owner
 
 prompt 
 prompt ************
-prompt * Zeitplan *
+prompt * schedule *
 prompt ************
 
 select owner
@@ -68,9 +68,9 @@ select owner
         , job_name;
  
 prompt
-prompt *************
-prompt * Statistik *
-prompt *************
+prompt **************
+prompt * statistics *
+prompt **************
 
 select owner
      , job_name
@@ -85,9 +85,9 @@ select owner
 
 
 prompt
-prompt ************
-prompt * Historie *
-prompt ************
+prompt ***********
+prompt * history *
+prompt ***********
 
 select log_id
      , log_date

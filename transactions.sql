@@ -11,9 +11,9 @@
 set timin off
 
 prompt
-prompt ******************************************
-prompt * active transactions (and their queries *
-prompt ******************************************
+prompt *******************************************
+prompt * active transactions (and their queries) *
+prompt *******************************************
 
 column current_sql format a100
 column prev_sql format a100

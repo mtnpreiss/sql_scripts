@@ -10,9 +10,9 @@
 column owner format a30
 
 prompt
-prompt ***************************
-prompt * Groesse der DB-Schemata *
-prompt ***************************
+prompt *******************
+prompt * size of schemas *
+prompt *******************
 prompt
 
 compute sum of seg_mbyte on report
