@@ -1,6 +1,6 @@
 -- -----------------------------------------------------------------------------
 -- advice.sql
--- shows the content of some v§advice% views.
+-- shows the content of some v$advice% views.
 -- -----------------------------------------------------------------------------
 
 -- save sqlplus environment
