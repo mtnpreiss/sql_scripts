@@ -1,7 +1,6 @@
 -- -----------------------------------------------------------------------------
 -- xplan.sql
--- zeigt den Execution Plan des zuletzt erklärten Statements an
--- <  07.2005 MP
+-- shows the execution plan for the last explained query.
 -- -----------------------------------------------------------------------------
 select *
   from table(dbms_xplan.display);

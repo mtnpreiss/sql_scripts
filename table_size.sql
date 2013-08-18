@@ -1,8 +1,12 @@
 -- -----------------------------------------------------------------------------
 -- table_size.sql
--- liefert Informationen zur Größe einer Tabelle und der zugehörigen Indizes
+-- shows information on the size of a table and the related indexes.
 -- -----------------------------------------------------------------------------
 
+-- save sqlplus environment
+@ save_settings.sql
+
+-- set sqlplus environment
 undefine owner
 undefine table_name
 
@@ -56,3 +60,5 @@ select s.owner
 set verify on
 set timin on
 
+-- restore sqlplus environment
+@ restore_settings.sql

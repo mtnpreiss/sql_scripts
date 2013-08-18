@@ -1,12 +1,12 @@
 -- ----------------------------------------------------------------------------
 -- sqltext.sql
--- liefert den Text zu einer Query
+-- shows the sql_text for a given sql_id.
 -- ----------------------------------------------------------------------------
 
--- sqlplus Variablen sichern
+-- save sqlplus environment
 @ save_settings.sql
 
--- sqlplus Variablen setzen
+-- set sqlplus environment
 set verify off
 set timin off
 set long 10000000
@@ -21,5 +21,5 @@ select sql_fulltext
 set verify on
 set timin on
 
--- sqlplus Variablen wiederherstellen
+-- restore sqlplus environment
 @ restore_settings.sql

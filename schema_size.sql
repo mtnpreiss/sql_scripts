@@ -1,8 +1,12 @@
 -- ----------------------------------------------------------------------------
 -- schema_size.sql
--- liefert die Größe der Schemata
+-- shows information on the size of schemas.
 -- ----------------------------------------------------------------------------
 
+-- save sqlplus environment
+@ save_settings.sql
+
+-- set sqlplus environment
 column owner format a30
 
 prompt
@@ -81,4 +85,6 @@ select t.owner
    and u.account_status = 'OPEN'
  order by t.total_size desc;
 
+-- restore sqlplus environment
+@ restore_settings.sql
 

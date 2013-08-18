@@ -1,6 +1,6 @@
 -- ----------------------------------------------------------------------------
 -- cursql.sql
--- liefert Informationen zu aktuellen Queries
+-- shows information on cached queries.
 -- ----------------------------------------------------------------------------
 
 -- sqlplus Variablen sichern

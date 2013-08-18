@@ -1,11 +1,11 @@
 -- -----------------------------------------------------------------------------
 -- bh.sql
--- listet Objekte auf, fuer die mehr als 10000 Bloecke im Cache vorliegen
--- vgl. http://jonathanlewis.wordpress.com/2006/11/02/but-its-in-the-manual/ 
--- --> Join ueber data_object_id = Dictionary object number of the segment
+-- shows objects with more than 10000 blocks in the buffer cache.
+-- s. http://jonathanlewis.wordpress.com/2006/11/02/but-its-in-the-manual/ 
+-- --> Join with data_object_id = dictionary object number of the segment
 --     that contains the object
 --
---              Zustandsangaben:
+--              status information:
 --              * free - Not currently in use
 --              * xcur - Exclusive
 --              * scur - Shared current
@@ -16,10 +16,10 @@
 --
 -- -----------------------------------------------------------------------------
 
--- sqlplus Variablen sichern
+-- save sqlplus environment
 @ save_settings.sql
 
--- sqlplus Variablen setzen
+-- set sqlplus environment
 column object_name format a30
 
 prompt
@@ -67,6 +67,6 @@ select bh.inst_id
 having count(*) > 10000
  order by bh.inst_id, count(*) desc;
 
--- sqlplus Variablen wiederherstellen
+-- restore sqlplus environment
 @ restore_settings.sql
 

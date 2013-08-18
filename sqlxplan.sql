@@ -1,7 +1,7 @@
 -- ----------------------------------------------------------------------------
 -- sqlxplan.sql
--- liefert den Zugriffsplan für ein 
--- über sql_id und child_number bestimmtes Statement
+-- shows the execution plan for a query in the cache (based on sql_id 
+-- and child_number)
 -- ----------------------------------------------------------------------------
 
 select plan_table_output

@@ -1,8 +1,12 @@
 -- ----------------------------------------------------------------------------
 -- longops.sql
--- liefert Informationen aus v$session_longops
+-- shows informations from gv$session_longops.
 -- ----------------------------------------------------------------------------
 
+-- save sqlplus environment
+@ save_settings.sql
+
+-- set sqlplus environment
 column sql_text format a200
 
 select to_char(sysdate, 'hh24:mi:ss') current_time
@@ -26,3 +30,5 @@ select to_char(sysdate, 'hh24:mi:ss') current_time
  where time_remaining > 0
 ;
 
+-- restore sqlplus environment
+@ restore_settings.sql

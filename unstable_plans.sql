@@ -1,11 +1,15 @@
 -- -----------------------------------------------------------------------------
 -- unstable_plans.sql
--- liefert Informationen zu Queries, deren Pläne und Laufzeiten sich  
--- im Rahmen der AWR-Historie geändert haben
--- erweiterte Version eines Scripts von Kerry Osborne
+-- shows information on queries with changed plans and increased runtime
+-- in the scope of AWR-History
+-- based on Kerry Osborne's script:
 -- http://kerryosborne.oracle-guy.com/scripts/unstable_plans.sql
 -- -----------------------------------------------------------------------------
 
+-- save sqlplus environment
+@ save_settings.sql
+
+-- set sqlplus environment
 set verify off
 
 column min_etime format 999999.00
@@ -64,3 +68,5 @@ select b.*
 
 set verify on
 
+-- restore sqlplus environment
+@ restore_settings.sql

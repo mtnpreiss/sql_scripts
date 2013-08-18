@@ -1,7 +1,7 @@
 -- -----------------------------------------------------------------------------
 -- lastsql.sql
--- zeigt SQL-Queries der letzten <n> Stunden für ein gegebenes Schema an
--- und liefert anschließend den execution plan für ein ausgewähltes Statement
+-- shows sql queries for the last <n> hours in a given schema
+-- and a corresponding plan for a selected query.
 -- -----------------------------------------------------------------------------
 
 prompt
@@ -10,10 +10,10 @@ prompt * SQL Queries der letzten <n> Stunden *
 prompt ***************************************
 prompt
 
--- sqlplus Variablen sichern
+-- save sqlplus environment
 @ save_settings.sql
 
--- sqlplus Variablen setzen
+-- set sqlplus environment
 set verify off
 
 undefine sql_id
@@ -54,5 +54,5 @@ select *
              
 set verify on             
 
--- sqlplus Variablen wiederherstellen
+-- restore sqlplus environment
 @ restore_settings.sql

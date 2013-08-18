@@ -1,8 +1,12 @@
 -- ----------------------------------------------------------------------------
 -- sqlmonitor.sql
--- liefert sqlmonitor-Informationen zu einer sql_id
+-- shows information from sqlmonitor for a given sql_id.
 -- ----------------------------------------------------------------------------
 
+-- save sqlplus environment
+@ save_settings.sql
+
+-- set sqlplus environment
 undefine sql_id
 undefine sql_exec_id
 undefine inst_id
@@ -26,8 +30,8 @@ select m.sid
      , m.sql_exec_start 
      , m.last_refresh_time
      , m.status
-     , round(m.ELAPSED_TIME/1000000) ela_secs_mon
-     , round(s.ELAPSED_TIME/1000000) ela_secs_sql
+     , round(m.elapsed_time/1000000) ela_secs_mon
+     , round(s.elapsed_time/1000000) ela_secs_sql
      , substr(s.sql_text, 1, 100) sqltext
   from gv$sql_monitor m
      , gv$sql s
@@ -53,3 +57,5 @@ set timin on
 undefine sql_id
 undefine sql_exec_id
 
+-- restore sqlplus environment
+@ restore_settings.sql

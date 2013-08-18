@@ -1,7 +1,6 @@
 -- ----------------------------------------------------------------------------
 -- cursessions.sql
--- liefert diverse Informationen zu den Sessions in der Datenbank
--- aus gv$session, gv$sesstat, gv$sql, gv$sess_time_model
+-- shows information on current database sessions.
 -- ----------------------------------------------------------------------------
 
 -- sqlplus Variablen sichern

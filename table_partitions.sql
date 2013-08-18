@@ -1,8 +1,12 @@
 -- -----------------------------------------------------------------------------
 -- table_partitions.sql
--- liefert Informationen zu Tabellenpartitionen
+-- shows information on table partitions.
 -- -----------------------------------------------------------------------------
 
+-- save sqlplus environment
+@ save_settings.sql
+
+-- set sqlplus environment
 set verify off
 set timin off
 
@@ -95,3 +99,5 @@ DBA_SUBPART_HISTOGRAMS
 DBA_SUBPART_KEY_COLUMNS
 */
 
+-- restore sqlplus environment
+@ restore_settings.sql

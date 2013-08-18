@@ -1,7 +1,6 @@
 -- -----------------------------------------------------------------------------
 -- sysmetrics.sql
--- liefert aus V$SYSMETRIC_HISTORY load- und logon-Informationen 
--- für die letzte Stunde
+-- shows load and logon information from v$sysmetric_history for the last hour.
 -- -----------------------------------------------------------------------------
 
 prompt
@@ -9,6 +8,10 @@ prompt ****************************************************
 prompt * load- und logon-Informationen der letzten Stunde *
 prompt ****************************************************
 
+-- save sqlplus environment
+@ save_settings.sql
+
+-- set sqlplus environment
 set pages 100
 column os_load_n1 format 999.99
 column os_load_n2 format 999.99
@@ -42,3 +45,5 @@ having max(os_load) > 0
  order by time_range
 ;
 
+-- restore sqlplus environment
+@ restore_settings.sql

@@ -1,9 +1,12 @@
 -- -----------------------------------------------------------------------------
 -- scheduler_jobs.sql
--- liefert Informationen zu Scheduler Jobs
+-- shows information on scheduler jobs.
 -- -----------------------------------------------------------------------------
 
--- sqlplus Variablen setzen
+-- save sqlplus environment
+@ save_settings.sql
+
+-- set sqlplus environment
 set timin off
 set verify off
 
@@ -22,7 +25,7 @@ select owner
  order by owner
         , job_name;
 
-accept job_name prompt 'Name des Jobs: '
+accept job_name prompt 'Name of the job: '
 
 prompt
 prompt **********************
@@ -106,3 +109,5 @@ select log_id
 set timin on
 set verify on
 
+-- restore sqlplus environment
+@ restore_settings.sql

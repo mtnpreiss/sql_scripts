@@ -1,8 +1,12 @@
 -- -----------------------------------------------------------------------------
 -- desc.sql
--- erweitertes <desc>-Script von Tom Kyte
+-- a somewhat extended version of Tom Kyte's script.
 -- -----------------------------------------------------------------------------
 
+-- save sqlplus environment
+@ save_settings.sql
+
+-- set sqlplus environment
 column data_type format a30
 column data_length format 999999
 column degree format a10
@@ -237,4 +241,6 @@ prompt *************************************************************************
 set verify on
 set timin on
 
+-- restore sqlplus environment
+@ restore_settings.sql
 

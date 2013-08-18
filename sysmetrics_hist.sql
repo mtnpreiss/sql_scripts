@@ -1,13 +1,17 @@
 -- ----------------------------------------------------------------------------
 -- sysmetrics_hist.sql
--- ermittelt eine Historie der Systemlast pro Stunde
+-- shows the history of OS load per hour.
 -- ----------------------------------------------------------------------------
 
 prompt
-prompt ***************************************
-prompt * load-Informationen der letzten Tage *
-prompt ***************************************
+prompt **************************************
+prompt * load information for the last days *
+prompt **************************************
 
+-- save sqlplus environment
+@ save_settings.sql
+
+-- set sqlplus environment
 column os_load_max_n1 format 999.00
 column os_load_max_n2 format 999.00
 column os_load_avg_n1 format 999.00
@@ -48,4 +52,6 @@ select time_range
  order by time_range
 ;
 
+-- restore sqlplus environment
+@ restore_settings.sql
 

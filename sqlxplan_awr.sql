@@ -1,7 +1,6 @@
 -- ----------------------------------------------------------------------------
 -- sqlxplan_awr.sql
--- liefert die Zugriffspläne für ein im AWR vorliegendes Statement
--- (bestimmt über sql_id)
+-- shows the execution plan for a query saved in the AWR (based on sql_id)
 -- ----------------------------------------------------------------------------
 
 select *

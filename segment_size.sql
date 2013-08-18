@@ -1,9 +1,12 @@
 -- -----------------------------------------------------------------------------
 -- segment_size.sql
--- liefert die Größe der Segmente eines gegebenen Schemas,
--- die größer als ein gegebener Minimalwert (in MB) sind
+-- shows information on the size of segments.
 -- -----------------------------------------------------------------------------
 
+-- save sqlplus environment
+@ save_settings.sql
+
+-- set sqlplus environment
 undefine owner
 undefine segment_name
 undefine tablespace_name
@@ -61,3 +64,5 @@ having round(sum(bytes)/1024/1024) > to_number(coalesce('&min_size_mb', '1000'))
 set verify on
 set timin on
 
+-- restore sqlplus environment
+@ restore_settings.sql
