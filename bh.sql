@@ -1,8 +1,8 @@
 -- -----------------------------------------------------------------------------
 -- bh.sql
--- listet Objekte auf, für die mehr als 10000 Blöcke im Cache vorliegen
+-- listet Objekte auf, fuer die mehr als 10000 Bloecke im Cache vorliegen
 -- vgl. http://jonathanlewis.wordpress.com/2006/11/02/but-its-in-the-manual/ 
--- --> Join über data_object_id = Dictionary object number of the segment
+-- --> Join ueber data_object_id = Dictionary object number of the segment
 --     that contains the object
 --
 --              Zustandsangaben:
