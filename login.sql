@@ -48,6 +48,9 @@ column external_name format a60
 column directory_path format a200
 column qualified_col_name format a50
 
+col username format a30
+col password format a30
+
 -- title
 define gname=idle
 column global_name new_value gname
